@@ -1,6 +1,8 @@
-# Notify stream
+# Notify twitch stream
 
-Notifly @strager stream.
+This bot can notify you with any twitch streamer with sound.
+
+To change the streamer, just change their username on line 8 `?user_login=<username>`
 
 ## Requirements
 
