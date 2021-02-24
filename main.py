@@ -1,4 +1,3 @@
-# sudo apt install mpg123
 import requests
 import os
 import time
