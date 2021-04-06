@@ -10,7 +10,7 @@ Instructions:
 
 1. Download Pygame:
 
-        $ sudo apt-get install mpg123
+        $ sudo apt install mpg123
 
 2. Install dotenv if you don't have
 
