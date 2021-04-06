@@ -1,6 +1,7 @@
+#!/usr/bin/env python3
+
 import requests
 import os
-import time
 
 
 class Notifly:
@@ -27,17 +28,15 @@ class Notifly:
                 content_json = content_json[0]
                 if content_json['type'] == 'live':
                     os.system("mpg123 " + "sound.mp3")
-                    print("https://www.twitch.tv/strager")
                     return True
                 else:
                     return False
             else:
                 return False
-        except ConnectionError:
+        except requests.exceptions.ConnectionError:
             self.check()
 
 
 if __name__ == "__main__":
     while True:
         print(Notifly().check())
-        time.sleep(1)
