@@ -1,6 +1,6 @@
 # Notify twitch stream
 
-This bot can notify you with any twitch streamer with sound.
+This bot can notify you with any twitch streamer with a sound.
 
 To change the streamer, just change their username on line 8 `?user_login=<username>`
 
