@@ -2,8 +2,6 @@
 
 This bot can notify you with any twitch streamer with a sound.
 
-To change the streamer, just change their username on line 8 `?user_login=<username>`
-
 ## Requirements
 
 ## Linux
@@ -14,6 +12,12 @@ Instructions:
 
         $ sudo apt-get install mpg123
 
-1. Run:
+2. Install dotenv if you don't have
 
-        $ python3 main.py
+        pip3 install python-dotenv
+
+3. Create a `.env` file to store credentials `CLIENT_ID` and `SECRET`
+
+4. Run:
+
+        $ python3 main.py --user strager
