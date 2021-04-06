@@ -10,6 +10,7 @@ load_dotenv('.env')
 SECRET = os.environ['SECRET']
 CLIENT_ID = os.environ['CLIENT_ID']
 
+
 class Notifly:
     def __init__(self, username):
         self.username = username
@@ -45,7 +46,8 @@ class Notifly:
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="This bot can notify you with any twitch streamer with a sound.")
+    parser = argparse.ArgumentParser(description="""This bot can notify you with
+                                     any twitch streamer with a sound.""")
     parser.add_argument('--user', type=str, help="username of twitch streamer")
     args = parser.parse_args()
     username = args.user
