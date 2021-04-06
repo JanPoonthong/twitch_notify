@@ -2,11 +2,13 @@
 
 import requests
 import os
-
+import sys
+import argparse
 
 class Notifly:
-    def __init__(self):
-        self.url = "https://api.twitch.tv/helix/streams?user_login=strager"
+    def __init__(self, username):
+        self.username = username
+        self.url = f"https://api.twitch.tv/helix/streams?user_login={self.username}"
         self.auth = "https://id.twitch.tv/oauth2/token"
         self.client_id = ""
         self.secret = ""
@@ -38,5 +40,13 @@ class Notifly:
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="This bot can notify you with any twitch streamer with a sound.")
+    parser.add_argument('--user', type=str, help="username of twitch streamer")
+    args = parser.parse_args()
+    username = args.user
+    if len(sys.argv) == 1:
+        parser.print_help()
+        sys.exit()
+
     while True:
-        print(Notifly().check())
+        print(Notifly(username).check())
