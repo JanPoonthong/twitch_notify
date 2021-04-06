@@ -12,6 +12,14 @@ Instructions:
 
         $ sudo apt-get install mpg123
 
-1. Run:
+2. Install dotenv if you don't have
+				```
+				 pip3 install python-doten
+				 ```
+3. Create a ```.env``` file to store credentials
+				```CLIENT_ID```
+				```SECRET```
+
+4. Run:
 
         $ python3 main.py --user strager

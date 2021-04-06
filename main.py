@@ -4,14 +4,19 @@ import requests
 import os
 import sys
 import argparse
+from dotenv import load_dotenv
+
+load_dotenv('.env')
+SECRET = os.environ['SECRET']
+CLIENT_ID = os.environ['CLIENT_ID']
 
 class Notifly:
     def __init__(self, username):
         self.username = username
         self.url = f"https://api.twitch.tv/helix/streams?user_login={self.username}"
         self.auth = "https://id.twitch.tv/oauth2/token"
-        self.client_id = ""
-        self.secret = ""
+        self.client_id = CLIENT_ID
+        self.secret = SECRET
 
     def check(self):
         try:
