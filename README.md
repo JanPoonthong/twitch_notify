@@ -16,8 +16,8 @@ Instructions:
 
         pip3 install python-dotenv
 
-3. Create a `.env` file to store credentials `CLIENT_ID` and `SECRET`. Don't
-   create `.env-example`
+3. Don't create `.env-example`. Create a `.env` file to store credentials `CLIENT_ID`
+   and `SECRET`.
 
 4. Run:
 
