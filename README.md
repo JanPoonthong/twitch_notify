@@ -8,11 +8,11 @@ This bot can notify you with any twitch streamer with a sound.
 
 Instructions:
 
-1. Download Pygame:
+1. Download mpg123:
 
         $ sudo apt install mpg123
 
-2. Install dotenv if you don't have
+2. Install dotenv:
 
         pip3 install python-dotenv
 
@@ -20,4 +20,4 @@ Instructions:
 
 4. Run:
 
-        $ python3 main.py --user strager
+        $  python3 main.py --user <strager> or ./main.py --user <strager>
