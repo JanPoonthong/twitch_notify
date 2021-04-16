@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # twitch_notify notify streamer when they're streaming
 # Copyright (C) 2021  Jan Poonthong
 #
@@ -13,8 +15,6 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with twitch_notify.  If not, see <https://www.gnu.org/licenses/>.
-
-#!/usr/bin/env python3
 
 import argparse
 import os
