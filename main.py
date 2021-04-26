@@ -68,7 +68,7 @@ if __name__ == "__main__":
         description="""This bot can notify you with
                                      any twitch streamer with a sound."""
     )
-    parser.add_argument("--user", type=str, help="username of twitch streamer")
+    parser.add_argument("user", type=str, help="username of twitch streamer")
     args = parser.parse_args()
     user_name = args.user
     if len(sys.argv) == 1:

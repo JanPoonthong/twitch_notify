@@ -21,4 +21,4 @@ Instructions:
 
 4. Run:
 
-        $  python3 main.py --user <strager> or ./main.py --user <strager>
+        $  python3 main.py <strager> or ./main.py <strager>
