@@ -14,7 +14,7 @@ Instructions:
 
 2. Install dotenv:
 
-        pip3 install python-dotenv
+        $ pip3 install python-dotenv
 
 3. Don't create `.env-example`. Create a `.env` file to store credentials `CLIENT_ID`
    and `SECRET`.
