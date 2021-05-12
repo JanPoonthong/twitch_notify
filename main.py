@@ -51,16 +51,11 @@ class Notify:
         return head
 
     def check(self, head):
-        try:
-            content_json = requests.get(self.url, headers=head).json()["data"]
-
-            if content_json:
-                content_json = content_json[0]
-                if content_json["type"] == "live":
-                    os.system("mpg123 " + "sound.mp3")
-            time.sleep(60)
-        except requests.exceptions.ConnectionError:
-            self.check(head)
+        content_json = requests.get(self.url, headers=head).json()["data"]
+        if content_json:
+            content_json = content_json[0]
+            if content_json["type"] == "live":
+                os.system("mpg123 " + "sound.mp3")
 
 
 if __name__ == "__main__":
@@ -77,4 +72,8 @@ if __name__ == "__main__":
 
     head_token = Notify(user_name).get_token()
     while True:
-        Notify(user_name).check(head_token)
+        try:
+            Notify(user_name).check(head_token)
+        except requests.exceptions.ConnectionError:
+            Notify(user_name).check(head_token)
+        time.sleep(60)
