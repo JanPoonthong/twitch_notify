@@ -4,7 +4,7 @@ This bot can notify you with any twitch streamer with a sound.
 
 ## Requirements
 
-## Linux
+## Linux/MasOs and Windows
 
 Instructions:
 

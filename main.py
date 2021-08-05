@@ -32,9 +32,7 @@ CLIENT_ID = os.environ["CLIENT_ID"]
 class Notify:
     def __init__(self, username):
         self.username = username
-        self.url = (
-            f"https://api.twitch.tv/helix/streams?user_login={self.username}"
-        )
+        self.url = f"https://api.twitch.tv/helix/streams?user_login={self.username}"
         self.auth = "https://id.twitch.tv/oauth2/token"
         self.client_id = CLIENT_ID
         self.secret = SECRET
@@ -47,7 +45,7 @@ class Notify:
         }
         aut_call = requests.post(url=self.auth, params=auth_params)
         token = aut_call.json()["access_token"]
-        head = {"Client-ID": self.client_id, "Authorization": "Bearer " + token}
+        head = {"Client-ID": self.client_id, "Authorization": f"Bearer {token}"}
         return head
 
     def check(self, head):
@@ -76,4 +74,5 @@ if __name__ == "__main__":
             Notify(user_name).check(head_token)
         except requests.exceptions.ConnectionError:
             Notify(user_name).check(head_token)
+        print(f"Requesting to {user_name}")
         time.sleep(60)
