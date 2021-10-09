@@ -32,7 +32,9 @@ CLIENT_ID = os.environ["CLIENT_ID"]
 class Notify:
     def __init__(self, username):
         self.username = username
-        self.url = f"https://api.twitch.tv/helix/streams?user_login={self.username}"
+        self.url = (
+            f"https://api.twitch.tv/helix/streams?user_login={self.username}"
+        )
         self.auth = "https://id.twitch.tv/oauth2/token"
         self.client_id = CLIENT_ID
         self.secret = SECRET
