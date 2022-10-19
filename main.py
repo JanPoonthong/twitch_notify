@@ -22,6 +22,7 @@ import os
 import sys
 
 import requests
+from playsound import playsound
 from dotenv import load_dotenv
 
 load_dotenv(".env")
@@ -55,7 +56,8 @@ class Notify:
         if content_json:
             content_json = content_json[0]
             if content_json["type"] == "live":
-                os.system("mpg123 " + "sound.mp3")
+                playsound("sound.mp3")
+                # os.system("mpg123 " + "sound.mp3")
 
 
 if __name__ == "__main__":
