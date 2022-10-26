@@ -23,8 +23,10 @@ import sys
 
 import requests
 from dotenv import load_dotenv
+import pygame
 
 load_dotenv(".env")
+pygame.mixer.init()
 SECRET = os.environ["SECRET"]
 CLIENT_ID = os.environ["CLIENT_ID"]
 
@@ -55,7 +57,10 @@ class Notify:
         if content_json:
             content_json = content_json[0]
             if content_json["type"] == "live":
-                os.system("mpg123 " + "sound.mp3")
+                # os.system("mpg123 " + "sound.mp3")
+                pygame.mixer.music.load("sound.mp3")
+                pygame.mixer.music.play()
+
 
 
 if __name__ == "__main__":
