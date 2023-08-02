@@ -57,6 +57,7 @@ class Notify:
         if content_json:
             content_json = content_json[0]
             if content_json["type"] == "live":
+                print("https://twitch.tv/%s" % self.username)
                 # os.system("mpg123 " + "sound.mp3")
                 pygame.mixer.music.load("sound.mp3")
                 pygame.mixer.music.play()
